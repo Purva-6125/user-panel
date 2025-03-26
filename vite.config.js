@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0', // 🔹 Yeh line add karein
-    port: 5173, // 🔹 Apna desired port likhein
+    host: '0.0.0.0', // Allows external access
+    port: process.env.PORT || 5173, // Use Render's assigned port
   },
 });
